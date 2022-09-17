@@ -1,0 +1,83 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<body>
+<section class="table-container shadow-lg">
+    <h2 class="table-label"><%= user.userName %>'s Backstock</h2>
+    <div class="myInput-container">
+        <input id='myInput' onkeyup='searchTable()' type='text' placeholder="Search Backstock" class="shadow text-center">
+    </div>
+    <table 
+        id="myTable"
+        class="table table-sm table-dark table-hover shadow table-sortable">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="sort">Category</th>
+            <th class="sort">Brand</th>
+            <th class="sort">Description</th>
+            <th class="sort">
+              <span class="mobile-hide">Storage</span>
+                    Location
+            </th>
+            <th class="sort">
+                <span class="mobile-hide">Quantity</span>
+                <span class="mobile-show">#</span>
+            </th>
+            <th class="sort mobile-hide">Ideal Quantity</th>
+            <th class="sort mobile-hide width-hide">Size</th>
+            <th class="sort mobile-hide width-hide">Expiration</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <% todos.forEach(el => {%>
+            <tr>   
+                <td class="todoItem pencil" data-id='<%=el._id%>'>
+                    <a href="/todos/edit/<%= el.id %>" class="fa fa-pen-to-square pencil-btn">
+                    </a>
+                </td>
+                <td class="todoItem" data-id='<%=el._id%>'>
+                    <span><%= el.category %></span>
+                </td>
+                <td class="todoItem" data-id='<%=el._id%>'>
+                    <span><%= el.brand %></span>
+                </td>
+                <td class="todoItem" data-id='<%=el._id%>'>
+                    <span><%= el.description %></span>
+                </td>
+                <td class="todoItem" data-id='<%=el._id%>'>
+                    <span><%= el.storageLocation %></span>
+                </td>
+                <td class="todoItem quantity-box" data-id='<%=el._id%>'>
+                    <span class="quantity"><%= el.quantity %></span>
+                </td>
+                <td class="todoItem mobile-hide" data-id='<%=el._id%>'>
+                    <span><%= el.idealQuantity %></span>
+                </td>
+                <td class="todoItem mobile-hide width-hide" data-id='<%=el._id%>'>
+                    <span><%= el.size %></span>
+                </td>
+                <td class="todoItem mobile-hide width-hide" data-id='<%=el._id%>'>
+                    <span><%= el.expirationDate %></span>
+                </td>
+                <!-- <td class="todoItem trash" data-id='<%=el._id%>'>
+                    <span class="del"><i class="fa fa-trash-can"></i></span>
+                </td> -->
+                <!-- <td class="todoItem trash" data-id='<%=el._id%>' onclick="return confirm_delete('Are you sure you want to delete this item?')">
+                    <span class="del" onclick="return confirm_delete('Are you sure you want to delete this item?')"><i class="fa fa-trash-can"></i></span> -->
+                <!-- </td> -->
+            </tr>
+        <% }) %>
+        </tbody>
+    </table>
+</section>
+
+<!-- Button trigger modal -->
+<div class="text-center">
+    <a href="/todos/add"
+        class="btn btn-warning mb-3 new-backstock-btn shadow">
+        Add New Backstock Item
+    </a>
+</div>
+
+<%- include('partials/footer') %>
