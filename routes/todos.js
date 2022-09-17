@@ -13,10 +13,6 @@ router.put('/edit/:id', ensureAuth, todosController.editTodo)
 
 router.post('/createTodo', todosController.createTodo)
 
-router.put('/markComplete', todosController.markComplete)
-
-router.put('/markIncomplete', todosController.markIncomplete)
-
-router.delete('edit/:id/deleteTodo', todosController.deleteTodo)
+router.delete('/deleteTodo/:id', todosController.deleteTodo)
 
 module.exports = router

@@ -20,3 +20,7 @@ function idealMinusOne() {
 function idealPlusOne() {
     document.getElementById('floatingIdealQuantity').stepUp();
 }
+
+function confirm() {
+    const result = confirm("Are you sure you want to delete this item?")
+}

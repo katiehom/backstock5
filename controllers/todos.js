@@ -36,29 +36,12 @@ module.exports = {
                 comments: req.body.comments,
                 userId: req.user.id
             })
-            console.log('Marked Complete')
+            console.log('Edited Backstock item')
             res.redirect('/todos')
         }catch(err){
             console.log(err)
         }
     },
-    // edit: async (req, res)=>{
-    //     try{
-    //         const editItem = await Todo.find({itemId:req.params.id})
-    //         res.render('edit.ejs', {
-    //             category: req.body.category, 
-    //             brand: req.body.brand,
-    //             description: req.body.description,
-    //             storageLocation: req.body.storageLocation,
-    //             quantity: req.body.quantity,
-    //             idealQuantity: req.body.idealQuantity,
-    //             size: req.body.size,
-    //             expirationDate: req.body.expirationDate,
-    //             userId: req.user.id})
-    //     }catch(err){
-    //         console.log(err)
-    //     }
-    // },
     createTodo: async (req, res)=>{
         try{
             await Todo.create({
@@ -72,30 +55,8 @@ module.exports = {
                 expirationDate: req.body.expirationDate,
                 comments: req.body.comments,
                 userId: req.user.id})
-            console.log('Todo has been added!')
+            console.log('Backstock item has been added!')
             res.redirect('/todos')
-        }catch(err){
-            console.log(err)
-        }
-    },
-    markComplete: async (req, res)=>{
-        try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: true
-            })
-            console.log('Marked Complete')
-            res.json('Marked Complete')
-        }catch(err){
-            console.log(err)
-        }
-    },
-    markIncomplete: async (req, res)=>{
-        try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                completed: false
-            })
-            console.log('Marked Incomplete')
-            res.json('Marked Incomplete')
         }catch(err){
             console.log(err)
         }
@@ -112,10 +73,11 @@ module.exports = {
     // },
     deleteTodo: async (req, res) => {
         try {
-          // Find post by id
+          // Find item by id
           let post = await Todo.findById({ _id: req.params.id });
+          // Delete item from db
           await Todo.remove({ _id: req.params.id });
-          console.log("Deleted Item");
+          console.log("Deleted Backstock item");
           res.redirect("/todos");
         } catch (err) {
           res.redirect("/todos");

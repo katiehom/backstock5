@@ -70,15 +70,29 @@
             <div class="form-floating">
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" value="<%= item.comments %>"></textarea>
                 <label for="floatingTextarea2">Comments</label>
-              </div>
+            </div>
+        </form>
             <!-- need to create a spot in the db for this -->
-            <!-- Button trigger modal -->
             <div class="d-flex justify-content-between mt-4 editButtonRow">
+                <form
+                    action="/todos/deleteTodo/<%= item.id %>?_method=DELETE"
+                    method="POST"
+                    class="col-3"
+                >
+                    <button class="btn btn-danger fa fa-trash-can shadow" type="submit" id="newBackstockDelete"></button>
+                </form>
+                <!-- <form action="/todos/deleteTodo/<%= item._id %>?_method=DELETE"
+                    method="POST"
+                >
+                <i class="fa fa-trash-can btn btn-danger" id="newBackstockDelete"></i>
+                </form> -->
+                        <!-- <button class="btn btn-danger shadow modal-btn">Delete</button>
+
                 <button type="button" class="btn btn-danger shadow" id="newBackstockDelete" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="fa fa-trash-can"></i>
                   </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1"     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 Modal -->
+                <!-- <div class="modal fade" id="exampleModal" tabindex="-1"     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -91,18 +105,18 @@
                         <div class="modal-footer">
                         <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Cancel</button>
                         <form
-                        action="/todos/edit/<%= item._id %>/deleteTodo?_method=DELETE"
+                        action="/todos/deleteTodo/<%= item._id %>?_method=DELETE"
                         method="POST"
                         >
                         <button class="btn btn-danger shadow modal-btn">Delete</button>
                         </div>
                     </div>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
                 <!--  -->
                 <div class="d-flex cancelSubmit-container">
                     <a href="/todos" class="btn btn-lg btn-secondary shadow" id="newBackstockCancel">Cancel</a>
-                    <a href="/todos/edit<%= item._id %>"><button type="submit" id="newBackstockSubmit" class="btn btn-lg btn-primary shadow" data-dismiss="modal">Submit</button></a>
+                    <a href="/todos/edit<%= item._id %>"><button type="submit" id="newBackstockSubmit" class="btn btn-lg btn-primary shadow">Submit</button></a>
                 </div>
             </div>
         </form>
