@@ -4,7 +4,7 @@
 <body>
     <div class="container mt-5 col-lg-8">
         <h2 class="text-center mb-3">Edit Backstock Item Info</h2>
-        <form action="/todos/createTodo" method='POST'>
+        <form action="/todos/edit/<%= item._id %>?_method=PUT" method='POST'>
             <div class="form-floating mb-3">
                 <select class="form-select shadow text-center" id="floatingCategory" name="category">
                     <option value="" disabled>Select One...</option>
@@ -94,11 +94,6 @@
                         action="/todos/edit/<%= item._id %>/deleteTodo?_method=DELETE"
                         method="POST"
                         >
-                        <input
-                                type="hidden"
-                                name="_method"
-                                value="DELETE"
-                        />
                         <button class="btn btn-danger shadow modal-btn">Delete</button>
                         </div>
                     </div>
@@ -107,7 +102,7 @@
                 <!--  -->
                 <div class="d-flex cancelSubmit-container">
                     <a href="/todos" class="btn btn-lg btn-secondary shadow" id="newBackstockCancel">Cancel</a>
-                    <button type="submit" id="newBackstockSubmit" class="btn btn-lg btn-primary shadow" data-dismiss="modal">Submit</button>
+                    <a href="/todos/edit<%= item._id %>"><button type="submit" id="newBackstockSubmit" class="btn btn-lg btn-primary shadow" data-dismiss="modal">Submit</button></a>
                 </div>
             </div>
         </form>

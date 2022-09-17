@@ -21,7 +21,27 @@ module.exports = {
         } catch (err) {
           console.log(err);
         }
-      },
+    },
+    editTodo: async (req, res)=>{
+        try{
+            await Todo.findOneAndUpdate({
+                category: req.body.category, 
+                brand: req.body.brand,
+                description: req.body.description,
+                storageLocation: req.body.storageLocation,
+                quantity: req.body.quantity,
+                idealQuantity: req.body.idealQuantity,
+                size: req.body.size,
+                expirationDate: req.body.expirationDate,
+                comments: req.body.comments,
+                userId: req.user.id
+            })
+            console.log('Marked Complete')
+            res.redirect('/todos')
+        }catch(err){
+            console.log(err)
+        }
+    },
     // edit: async (req, res)=>{
     //     try{
     //         const editItem = await Todo.find({itemId:req.params.id})

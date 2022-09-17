@@ -10,9 +10,14 @@ function sortTableByColumn(table, column, asc = true) {
     const sortedRows = rows.sort((a, b) => {
         const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim()
         const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim()
+        if (isNaN(parseFloat(aColText)) && isNaN(parseFloat(bColText))) {
+            return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+        }
+          return +aColText > +bColText ? (1 * dirModifier) : (-1 * dirModifier);
+        });
 
-        return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier)
-    })
+    //     return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier)
+    // })
 
     // Remove all existing TRs from the table
     while(tBody.firstChild) {
