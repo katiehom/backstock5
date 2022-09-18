@@ -16,9 +16,6 @@ function sortTableByColumn(table, column, asc = true) {
           return +aColText > +bColText ? (1 * dirModifier) : (-1 * dirModifier);
         });
 
-    //     return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier)
-    // })
-
     // Remove all existing TRs from the table
     while(tBody.firstChild) {
         tBody.removeChild(tBody.firstChild)

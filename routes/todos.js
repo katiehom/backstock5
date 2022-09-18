@@ -9,7 +9,7 @@ router.get('/add', ensureAuth, todosController.add)
 
 router.get('/edit/:id', ensureAuth, todosController.edit)
 
-router.put('/edit/:id', ensureAuth, todosController.editTodo)
+router.put('/:id', ensureAuth, todosController.update)
 
 router.post('/createTodo', todosController.createTodo)
 

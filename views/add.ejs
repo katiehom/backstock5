@@ -6,7 +6,7 @@
         <h2 class="text-center mb-3">Enter Backstock Item Info</h2>
         <form action="/todos/createTodo" method='POST'>
             <div class="form-floating mb-3">
-                <select class="form-select shadow text-center" id="floatingCategory" name="category">
+                <select class="form-select shadow text-center" id="floatingCategory" required name="category">
                     <option value="" disabled selected>Select One...</option>
                     <option value="Frozen">Frozen</option>
                     <option value="Health & Beauty">Health & Beauty</option>
@@ -20,15 +20,15 @@
                 <label for="floatingCategory">Category</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control shadow text-center" id="floatingBrand" placeholder="Brand" name='brand'>
+                <input type="text" required class="form-control shadow text-center" id="floatingBrand" placeholder="Brand" name='brand'>
                 <label for="floatingBrand">Brand</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control shadow text-center" id="floatingDescription" placeholder="Description" name='description'>
+                <input type="text" required class="form-control shadow text-center" id="floatingDescription" placeholder="Description" name='description'>
                 <label for="floatingDescription">Description</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control shadow text-center" id="floatingLocation" placeholder="Storage Location" name='storageLocation'>
+                <input type="text" required class="form-control shadow text-center" id="floatingLocation" placeholder="Storage Location" name='storageLocation'>
                 <label for="floatingLocation">Storage Location</label>
             </div>
             <div class="d-flex justify-content-center quantity-row">
@@ -37,7 +37,7 @@
                         <i class="fa fa-minus-circle" id="quantityMinus"></i>
                     </div>
                     <div class="form-floating mb-3 col-5">
-                        <input type="number" min="0" value="null" step="1" class="form-control shadow quantity-input text-center" id="floatingQuantity" placeholder="Quantity" name='quantity'>
+                        <input type="number" required min="0" value="null" step="1" class="form-control shadow quantity-input text-center" id="floatingQuantity" placeholder="Quantity" name='quantity'>
                         <label for="floatingQuantity"> Quantity</label>
                     </div>
                     <div class="plus">
@@ -49,7 +49,7 @@
                         <i class='fa fa-minus-circle' id="idealQuantityMinus"></i>
                     </div>
                     <div class="form-floating mb-3 col-5">
-                        <input type="number" min="0" value="null" step="1" class="form-control shadow quantity-input text-center" id="floatingIdealQuantity" placeholder="Ideal Quantity" name='idealQuantity' class="hidden">
+                        <input type="number" required min="0" value="null" step="1" class="form-control shadow quantity-input text-center" id="floatingIdealQuantity" placeholder="Ideal Quantity" name='idealQuantity' class="hidden">
                         <label for="floatingIdealQuantity">Ideal Quantity</label>
                     </div>
                     <div class="plus">
@@ -68,8 +68,8 @@
 
             <!-- adding comments at bottom of form -->
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Comments</label>
+                <input class="form-control text-center" type="text" name="comments" placeholder="Comments" id="floatingComments" style="height: 100px">
+                <label for="floatingComments">Comments</label>
                 </div>
             <!-- need to create a spot in the db for this -->
 

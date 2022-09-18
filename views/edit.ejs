@@ -4,9 +4,11 @@
 <body>
     <div class="container mt-5 col-lg-8">
         <h2 class="text-center mb-3">Edit Backstock Item Info</h2>
-        <form action="/todos/edit/<%= item._id %>?_method=PUT" method='POST'>
+        <form 
+            action="/todos/<%= item._id %>/?_method=PUT" 
+            method='POST'>
             <div class="form-floating mb-3">
-                <select class="form-select shadow text-center" id="floatingCategory" name="category">
+                <select class="form-select shadow text-center" id="floatingCategory" required name="category">
                     <option value="" disabled>Select One...</option>
                     <option value="Frozen" <% if(item.category == "Frozen"){ %> selected <% } %> > Frozen </option>
                     <option value="Health & Beauty" <% if(item.category == "Health & Beauty"){ %> selected <% } %> >Health & Beauty</option>
@@ -20,15 +22,15 @@
                 <label for="floatingCategory">Category</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control shadow text-center" id="floatingBrand" placeholder="Brand" name='brand' value="<%= item.brand %>">
+                <input type="text" required class="form-control shadow text-center" id="floatingBrand" placeholder="Brand" name='brand' value="<%= item.brand %>">
                 <label for="floatingBrand">Brand</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control shadow text-center" id="floatingDescription" placeholder="Description" name='description' value="<%= item.description %>">
+                <input type="text" required class="form-control shadow text-center" id="floatingDescription" placeholder="Description" name='description' value="<%= item.description %>">
                 <label for="floatingDescription">Description</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="text" class="form-control shadow text-center" id="floatingLocation" placeholder="Storage Location" name='storageLocation' value="<%= item.storageLocation %>">
+                <input type="text" required class="form-control shadow text-center" id="floatingLocation" placeholder="Storage Location" name='storageLocation' value="<%= item.storageLocation %>">
                 <label for="floatingLocation">Storage Location</label>
             </div>
             <div class="d-flex justify-content-center quantity-row">
@@ -37,7 +39,7 @@
                         <i class="fa fa-minus-circle" id="quantityMinus"></i>
                     </div>
                     <div class="form-floating mb-3 col-5">
-                        <input type="number" min="0" value="<%= item.quantity %>"step="1" class="form-control shadow quantity-input text-center" id="floatingQuantity" placeholder="Quantity" name='quantity'>
+                        <input type="number" required min="0" value="<%= item.quantity %>"step="1" class="form-control shadow quantity-input text-center" id="floatingQuantity" placeholder="Quantity" name='quantity'>
                         <label for="floatingQuantity"> Quantity</label>
                     </div>
                     <div class="plus">
@@ -49,7 +51,7 @@
                         <i class='fa fa-minus-circle' id="idealQuantityMinus"></i>
                     </div>
                     <div class="form-floating mb-3 col-5">
-                        <input type="number" min="0" value="<%= item.idealQuantity %>" step="1" class="form-control shadow quantity-input text-center" id="floatingIdealQuantity" placeholder="Ideal Quantity" name='idealQuantity' class="hidden">
+                        <input type="number" required min="0" value="<%= item.idealQuantity %>" step="1" class="form-control shadow quantity-input text-center" id="floatingIdealQuantity" placeholder="Ideal Quantity" name='idealQuantity' class="hidden">
                         <label for="floatingIdealQuantity">Ideal Quantity</label>
                     </div>
                     <div class="plus">
@@ -65,62 +67,29 @@
                 <input type="date" class="form-control shadow text-center" id="floatingExpirationDate" placeholder="Expiration Date" name='expirationDate' value="<%= item.expirationDate %>">
                 <label for="floatingExpirationDate">Expiration Date</label>
             </div>
-
-            <!-- adding comments at bottom of form -->
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" value="<%= item.comments %>"></textarea>
-                <label for="floatingTextarea2">Comments</label>
+                <input class="form-control text-center" type="text" name="comments" placeholder="Comments" id="floatingComments" style="height: 100px" value="<%= item.comments %>">
+                <label for="floatingComments">Comments</label>
             </div>
-        </form>
-            <!-- need to create a spot in the db for this -->
             <div class="d-flex justify-content-between mt-4 editButtonRow">
+                <div class="d-flex cancelSubmit-container"> 
+                    <a href="/todos" class="btn btn-lg btn-secondary shadow" id="newBackstockCancel">Cancel</a>
+                    <!-- <form
+                    action="/todos/<%= item._id %>?_method=PUT" 
+                    method='POST'> -->
+                    <button type="submit" value="Save" id="newBackstockSubmit" class="btn btn-lg btn-primary shadow">Submit</button>
+                </div>
+                </form>
+            </form>
                 <form
                     action="/todos/deleteTodo/<%= item.id %>?_method=DELETE"
                     method="POST"
                     class="col-3"
                 >
-                    <button class="btn btn-danger fa fa-trash-can shadow" type="submit" id="newBackstockDelete"></button>
+                    <button class="btn btn-danger shadow" onclick="confirm('Are you sure you want to delete?')" type="submit" id="newBackstockDelete"><i class="fa fa-trash-can"></i></button>
                 </form>
-                <!-- <form action="/todos/deleteTodo/<%= item._id %>?_method=DELETE"
-                    method="POST"
-                >
-                <i class="fa fa-trash-can btn btn-danger" id="newBackstockDelete"></i>
-                </form> -->
-                        <!-- <button class="btn btn-danger shadow modal-btn">Delete</button>
-
-                <button type="button" class="btn btn-danger shadow" id="newBackstockDelete" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <i class="fa fa-trash-can"></i>
-                  </button>
-                 Modal -->
-                <!-- <div class="modal fade" id="exampleModal" tabindex="-1"     aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Confirm Delete</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                        Are you sure you want to delete this item?
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary modal-btn" data-bs-dismiss="modal">Cancel</button>
-                        <form
-                        action="/todos/deleteTodo/<%= item._id %>?_method=DELETE"
-                        method="POST"
-                        >
-                        <button class="btn btn-danger shadow modal-btn">Delete</button>
-                        </div>
-                    </div>
-                    </div> -->
-                <!-- </div> -->
-                <!--  -->
-                <div class="d-flex cancelSubmit-container">
-                    <a href="/todos" class="btn btn-lg btn-secondary shadow" id="newBackstockCancel">Cancel</a>
-                    <a href="/todos/edit<%= item._id %>"><button type="submit" id="newBackstockSubmit" class="btn btn-lg btn-primary shadow">Submit</button></a>
-                </div>
             </div>
-        </form>
     </div>
-
+    
 <%- include('partials/footer') %>
 

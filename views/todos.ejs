@@ -26,14 +26,13 @@
             <th class="sort mobile-hide">Ideal Quantity</th>
             <th class="sort mobile-hide width-hide">Size</th>
             <th class="sort mobile-hide width-hide">Expiration</th>
-            <th></th>
         </tr>
         </thead>
         <tbody>
         <% todos.forEach(el => {%>
             <tr>   
                 <td class="todoItem pencil" data-id='<%=el._id%>'>
-                    <a href="/todos/edit/<%= el.id %>" class="fa fa-pen-to-square pencil-btn">
+                    <a href="/todos/edit/<%= el.id %>/" class="fa fa-pen-to-square pencil-btn">
                     </a>
                 </td>
                 <td class="todoItem" data-id='<%=el._id%>'>
@@ -60,19 +59,12 @@
                 <td class="todoItem mobile-hide width-hide" data-id='<%=el._id%>'>
                     <span><%= el.expirationDate %></span>
                 </td>
-                <!-- <td class="todoItem trash" data-id='<%=el._id%>'>
-                    <span class="del"><i class="fa fa-trash-can"></i></span>
-                </td> -->
-                <!-- <td class="todoItem trash" data-id='<%=el._id%>' onclick="return confirm_delete('Are you sure you want to delete this item?')">
-                    <span class="del" onclick="return confirm_delete('Are you sure you want to delete this item?')"><i class="fa fa-trash-can"></i></span> -->
-                <!-- </td> -->
             </tr>
         <% }) %>
         </tbody>
     </table>
 </section>
 
-<!-- Button trigger modal -->
 <div class="text-center">
     <a href="/todos/add"
         class="btn btn-warning mb-3 new-backstock-btn shadow">
