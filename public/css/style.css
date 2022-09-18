@@ -12,7 +12,7 @@ body {
     background: rgb(62,34,195);
     background: linear-gradient(310deg, rgba(62,34,195) 0%, rgb(68, 255, 162) 100%);
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 h1 {
     font-size: 5rem;
