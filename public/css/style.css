@@ -29,6 +29,10 @@ h3 {
     width: 90%;
     max-width: 577px;
 }
+.required-text {
+    font-size: .8rem;
+    margin-bottom: 0;
+}
 
 /**************** Containers *****************/
 .index-container {
@@ -109,7 +113,7 @@ input.form-control:not(:placeholder-shown) {
 .modal-content {
     border-radius: 30px;
 }
-#newBackstockButtons {
+#newBackstockButtons, .editButtonRow {
     padding-bottom: 10px;
 }
 
