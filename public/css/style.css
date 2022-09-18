@@ -109,6 +109,9 @@ input.form-control:not(:placeholder-shown) {
 .modal-content {
     border-radius: 30px;
 }
+#newBackstockButtons {
+    padding-bottom: 10px;
+}
 
 /**************** Table Content & Style *****************/
 .table-label {
@@ -143,6 +146,9 @@ input.internal.autofill.selected {
 }
 h2 {
     clear: both;
+}
+.quantity-box, .quantity-head {
+    min-width: 30px;
 }
 
 /**************** Buttons & Inputs *****************/
