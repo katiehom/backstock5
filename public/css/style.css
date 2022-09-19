@@ -158,6 +158,9 @@ h2 {
 .quantity-box, .quantity-head {
     min-width: 30px;
 }
+.expiration {
+    font-size: .8rem;
+}
 
 /**************** Buttons & Inputs *****************/
 .new-backstock-btn {
