@@ -2,7 +2,7 @@
 <%- include('partials/nav') %>
 <body>
 <section class="table-container shadow-lg">
-    <h2 class="table-label"><%= user.userName %>'s Backstock</h2>
+    <h2 class="table-label"><%=user.userName %>'s Backstock</h2>
     <div class="myInput-container">
         <input id='myInput' onkeyup='searchTable()' type='text' placeholder="Search Backstock" class="shadow text-center">
     </div>
@@ -30,7 +30,7 @@
         </thead>
         <tbody>
         <% todos.forEach(el => {%>
-            <tr>   
+            <tr class='<%= el.quantity === 0 || el.quantity < el.idealQuantity ? 'restock' : ''%>'>   
                 <td class="todoItem pencil" data-id='<%=el._id%>'>
                     <a href="/todos/edit/<%= el.id %>/" class="fa fa-pen-to-square pencil-btn">
                     </a>
@@ -48,7 +48,7 @@
                     <span><%= el.storageLocation %></span>
                 </td>
                 <td class="todoItem quantity-box" data-id='<%=el._id%>'>
-                    <span class="quantity"><%= el.quantity %></span>
+                    <span><%= el.quantity %></span>
                 </td>
                 <td class="todoItem mobile-hide" data-id='<%=el._id%>'>
                     <span><%= el.idealQuantity %></span>
