@@ -33,6 +33,10 @@ h3 {
     font-size: .8rem;
     margin-bottom: 0;
 }
+.restock {
+    /* color: rgb(235, 145, 59); */
+    color: rgb(244, 207, 69);
+}
 
 /**************** Containers *****************/
 .index-container {
