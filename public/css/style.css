@@ -160,6 +160,7 @@ h2 {
 }
 .expiration {
     font-size: .8rem;
+    vertical-align: middle;
 }
 
 /**************** Buttons & Inputs *****************/
