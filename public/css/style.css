@@ -45,6 +45,9 @@ h3 {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .index-left {
     width: 50%;
@@ -55,11 +58,14 @@ h3 {
     margin-top: 4rem;
     gap: 3rem;
 }
-.login-container, .signup-container {
+.login-container, .signup-container, .signup-container-edit {
     margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.signup-container-edit {
+    margin-top: 5%;
 }
 .table-container {
     border: 1px solid transparent;
@@ -69,6 +75,9 @@ h3 {
     margin: 5% auto 0;
 }
 table {
+    width: 100vw;
+}
+thead {
     width: 100vw;
 }
 tbody {
@@ -120,6 +129,14 @@ input.form-control:not(:placeholder-shown) {
 #newBackstockButtons, .editButtonRow {
     padding-bottom: 10px;
 }
+.currentInfo-card {
+    padding: 1rem;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 30px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
 
 /**************** Table Content & Style *****************/
 .table-label {
@@ -127,9 +144,9 @@ input.form-control:not(:placeholder-shown) {
     color: white;
     margin-top: 5px;
 }
-td.todoItem { 
+/* td.todoItem { 
     padding: 5px;
-}
+} */
 th {
     border: none;
     font-weight: 600;
@@ -345,6 +362,9 @@ i {
         display: flex;
         flex-direction: column;
     }
+    .currentInfo-card {
+        width: 75%;
+    }
 }
 @media screen and (max-width: 767px) {
     #newBackstockCancel, #newBackstockSubmit {
@@ -386,6 +406,9 @@ i {
     .login-container {
         margin-top: 30%;
     }
+    .currentInfo-card {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 644px){
     table, #myInput::placeholder {
@@ -417,6 +440,9 @@ i {
     }
     #newBackstockCancel, #newBackstockSubmit {
         width: 30vw;
+    }
+    .currentInfo-card {
+        width: 95%;
     }
 }
 @media screen and (max-width: 370px) {
