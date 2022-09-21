@@ -1,4 +1,5 @@
 const Todo = require('../models/Todo')
+const User = require('../models/User')
 
 module.exports = {
     getTodos: async (req,res)=>{
@@ -64,5 +65,24 @@ module.exports = {
           res.redirect("/todos");
         }
     },
+    // getAccount: async (req, res) => {
+    //       try {
+    //         const posts = await User.find({ user: req.user.id });
+    //         res.render("account.ejs", { user: req.user });
+    //       } catch (err) {
+    //         console.log(err);
+    //       }
+    // },
+    // editAccount: async (req, res) => {
+    //     try {
+    //     await User.findOneAndUpdate(
+    //         { _id: req.params.id }, req.body
+    //     );
+    //     console.log('Updated Account Information');
+    //     res.redirect(`/account`);
+    //     } catch (err) {
+    //     console.log(err);
+    //     }
+    // },      
 };
   
