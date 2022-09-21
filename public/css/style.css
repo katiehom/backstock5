@@ -144,9 +144,6 @@ input.form-control:not(:placeholder-shown) {
     color: white;
     margin-top: 5px;
 }
-/* td.todoItem { 
-    padding: 5px;
-} */
 th {
     border: none;
     font-weight: 600;
@@ -313,22 +310,31 @@ i {
 }
 
 /**************** Media Queries *****************/
-@media screen and (min-width: 1200px) {
-    .table-container {
-        width: 90%;
-    }
-}
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1801px) {
     .table-container {
         width: 75%;
     }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1800px) {
+    .table-container {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1450px) {
     .btn, table, thead {
         font-size: .9rem;
     }
+    .table-container {
+        width: 95%;
+    }
+    
+}
+@media screen and (max-width: 1250px) {
     .width-hide {
         display: none
+    }
+    .table-container {
+        width: 90%;
     }
 }
 @media screen and (max-width: 1152px){
@@ -355,6 +361,9 @@ i {
         width: 100%;
         margin-bottom: 35px;
         font-size: 2rem;
+    }
+    .table-container {
+        width: 100%;
     }
 }
 @media screen and (max-width: 992px) {
