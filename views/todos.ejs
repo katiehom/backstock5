@@ -59,8 +59,6 @@
                 <td class="todoItem mobile-hide width-hide expiration" data-id='<%=el._id%>'>
                     <span><%= el.expirationDate %></span>
                 </td>
-                <!-- Need to add class for almost expired or expired to expiration date and description and add to edit page as well ??? 
-                <tr class='<%= el.quantity === 0 || el.quantity < el.idealQuantity ? 'restock' : ''%>'>   -->
             </tr>
         <% }) %>
         </tbody>
@@ -73,5 +71,9 @@
         Add New Backstock Item
     </a>
 </div>
+<script>
+    const expDate = new Date (el.expirationDate)
+    format(expDate, 'MM/dd/yyyy');
+</script>
 
 <%- include('partials/footer') %>
