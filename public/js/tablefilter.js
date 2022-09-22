@@ -22,8 +22,8 @@ function searchTable() {
     }
 }
 
-const expDate = new Date (el.expirationDate)
-format(expDate, 'MM/dd/yyyy')
+// const expDate = new Date (el.expirationDate)
+// format(expDate, 'MM/dd/yyyy')
 
 // const date = new Date(expDateObj.value)
 // let day = date.getDate()
