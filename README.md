@@ -1,6 +1,6 @@
 # Backstock
 
-Keep track of what you have on hand so you always know - even on the go!
+Keep track of what you have on hand so you always know - even on the go! </br>
 Backstock is a home inventory app for tracking the items you have, their location, ideal quantities, and expiration dates! 
 
 <p align="center">
