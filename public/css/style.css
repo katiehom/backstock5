@@ -36,6 +36,14 @@ h3 {
     /* color: rgb(235, 145, 59); */
     color: rgb(244, 207, 69);
 }
+.footer-span {
+    margin: 1rem 0;
+    font-size: .9rem;
+    color: white;
+}
+.footer-span a {
+    color: white;
+}
 
 /**************** Containers *****************/
 .index-container {
@@ -136,6 +144,10 @@ input.form-control:not(:placeholder-shown) {
     background-color: rgb(50, 50, 50);
     color: white;
 }
+.footer-div {
+    display: flex;
+    justify-content: center;
+}
 
 /**************** Table Content & Style *****************/
 .table-label {
@@ -171,7 +183,7 @@ h2 {
 .quantity-box, .quantity-head {
     min-width: 30px;
 }
-.expiration {
+.expiration, .size {
     font-size: .8rem;
     vertical-align: middle;
 }
@@ -181,7 +193,7 @@ h2 {
 
 /**************** Buttons & Inputs *****************/
 .new-backstock-btn {
-    margin-top: 3%;
+    margin: 2rem 0;
     border: 1px solid transparent;
 }
 .new-backstock-btn:hover, .logout-btn:hover, .index-btn:hover, .login-btn:hover, #newBackstockSubmit:hover {

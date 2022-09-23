@@ -4,6 +4,7 @@
 function sortTableByColumn(table, column, asc = true) {
     const dirModifier = asc ? 1 : -1
     const tBody = table.tBodies[0]
+    const date = Array.from(tBody.querySelectorAll('.expiration'))
     const rows = Array.from(tBody.querySelectorAll('tr'))
 
     // Sort each row
@@ -42,3 +43,10 @@ document.querySelectorAll('.table-sortable th.sort').forEach(headerCell => {
         sortTableByColumn(tableElement, headerIndex, !currentIsAscending)
     })
 })
+
+// document.querySelector('.expirationSort').addEventListener('click', datesSorter)
+// function datesSorter(a, b) {
+//     if (new Date(a) < new Date(b)) return -1
+//     if (new Date(a) > new Date(b)) return 1
+//     return 0
+// }
