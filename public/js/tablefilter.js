@@ -1,5 +1,3 @@
-// const expDateObj = document.querySelector('#floatingExpirationDate')
-
 function searchTable() {
     let input, filter, found, table, tr, td, i, j;
     input = document.getElementById("myInput");
@@ -21,6 +19,7 @@ function searchTable() {
         }
     }
 }
+
 
 // const expDate = new Date (el.expirationDate)
 // format(expDate, 'MM/dd/yyyy')
