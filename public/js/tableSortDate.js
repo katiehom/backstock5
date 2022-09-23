@@ -105,3 +105,7 @@
 // //     if (new Date(a) > new Date(b)) return 1
 // //     return 0
 // // }
+
+        // } else if ((aColText.includes('/') && aColText.includes('20')) && (bColText.includes('/') && bColText.includes('20'))) {
+        //     return new Date(aColText).getTime() > new Date(bColText).getTime() ? (1 * dirModifier) : (-1 * dirModifier)
+        // }
