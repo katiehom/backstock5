@@ -1,13 +1,17 @@
 const Todo = require('../models/Todo')
 const User = require('../models/User')
+const dayjs = require('dayjs');
 
 module.exports = {
     getTodos: async (req,res)=>{
         console.log(req.user)
         try{
             const todoItems = await Todo.find({userId:req.user.id})
-            const itemsLeft = await Todo.countDocuments({userId:req.user.id,completed: false})
-            res.render('todos.ejs', {todos: todoItems, left: itemsLeft, user: req.user})
+            res.render('todos.ejs', {
+                todos: todoItems, 
+                user: req.user,
+                dayjs: dayjs,
+            })
         }catch(err){
             console.log(err)
         }
@@ -65,6 +69,7 @@ module.exports = {
           res.redirect("/todos");
         }
     },
+
     // getAccount: async (req, res) => {
     //       try {
     //         const posts = await User.find({ user: req.user.id });

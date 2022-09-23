@@ -25,7 +25,7 @@
             </th>
             <th class="sort mobile-hide">Ideal Quantity</th>
             <th class="sort mobile-hide width-hide">Size</th>
-            <th class="sort mobile-hide width-hide">Expiration</th>
+            <th class="mobile-hide width-hide">Expiration</th>
         </tr>
         </thead>
         <tbody>
@@ -57,7 +57,9 @@
                     <span><%= el.size %></span>
                 </td>
                 <td class="todoItem mobile-hide width-hide expiration" data-id='<%=el._id%>'>
-                    <span><%= el.expirationDate %></span>
+                    <% if (el.expirationDate) { %>
+                        <span><%= dayjs(el.expirationDate).format('MM/DD/YYYY') %></span>
+                    <% } %>
                 </td>
             </tr>
         <% }) %>
@@ -71,9 +73,5 @@
         Add New Backstock Item
     </a>
 </div>
-<!-- <script>
-    const expDate = new Date (el.expirationDate)
-    format(expDate, 'MM/dd/yyyy');
-</script> -->
 
 <%- include('partials/footer') %>

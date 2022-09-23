@@ -15,7 +15,7 @@ const TodoSchema = new mongoose.Schema({
   },
   storageLocation: {
     type: String,
-    required: true,
+    required: false,
   },
   quantity: {
     type: Number,
