@@ -21,7 +21,7 @@ Backstock is a home inventory app for tracking the items you have, their locatio
 
 ## How It's Made:
 
-**Tech used:** <strong>HTML, CSS, JavaScript, API</strong>
+**Tech used:** <strong>Node, Express, EJS, & JavaScript</strong>
 
 SongBeats integrates the GetSongBPM API for quick compilation of the top 100 searched songs at your entered beats per minute (BPM) or tempo. The user enters a tempo (between 40 and 220 BPM) into the input and clicks search which makes a request to the API for the top 100 songs meeting that criteria including song data such as Title, Artist, Year, Album and Genre which are added to the DOM using JavaScript.
 
