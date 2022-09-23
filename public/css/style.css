@@ -407,7 +407,7 @@ i {
         display: none;
     }
     .new-backstock-btn, .logout-btn, table, thead {
-        font-size: .8rem;
+        font-size: .9rem;
     }
     .mobile-show {
         display: inline;
@@ -449,7 +449,7 @@ i {
 }
 
 @media screen and (max-width: 526px){
-    table, .new-backstock-btn, .logout-btn {
+    table {
         font-size: .7rem;
     }
     thead {
