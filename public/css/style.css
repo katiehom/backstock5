@@ -37,12 +37,21 @@ h3 {
     color: rgb(244, 207, 69);
 }
 .footer-span {
-    margin: 1rem 0;
+    margin: .9rem 0;
     font-size: .9rem;
     color: white;
 }
 .footer-span a {
     color: white;
+}
+.expired {
+    color: rgb(255, 67, 117);
+}
+footer {
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 /**************** Containers *****************/
@@ -186,9 +195,6 @@ h2 {
 .expiration, .size {
     font-size: .8rem;
     vertical-align: middle;
-}
-.expired {
-    color: red;
 }
 
 /**************** Buttons & Inputs *****************/
