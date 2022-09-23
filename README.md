@@ -4,16 +4,16 @@ Keep track of what you have on hand so you always know - even on the go!
 Backstock is a home inventory app for tracking the items you have, their location, ideal quantities, and expiration dates! 
 
 <p align="center">
-  <a href="https://songbeats.netlify.app/" target="_blank">
-    <img src="https://user-images.githubusercontent.com/52755177/180622264-8a125f3c-29fe-46a7-8696-4ffd6c0f8ee8.gif" alt="SongBeats"/>
+  <a href="https://backstock.app/" target="_blank">
+    <img src="" alt="Backstock"/>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/katiehom/song-beats" target="_blank">
+  <a href="https://github.com/katiehom/backstock5" target="_blank">
     <img src="https://img.shields.io/static/v1?label=|&message=REPO&color=1f1591&style=plastic&logo=github&logo-color=white"/>
   </a>  
-  <a href="https://songbeats.netlify.app/" target="_blank">
+  <a href="https://backstock.app/" target="_blank">
     <img src="https://img.shields.io/static/v1?label=|&message=WEBSITE&color=c90c64&style=plastic&logo=netlify&logo-color=white"/>
   </a>
 </p>
@@ -21,18 +21,16 @@ Backstock is a home inventory app for tracking the items you have, their locatio
 
 ## How It's Made:
 
-**Tech used:** <strong>Node, Express, EJS, & JavaScript</strong>
+**Tech used:** <strong>Node, Express, EJS, Passport, Bootstrap & JavaScript</strong>
 
-SongBeats integrates the GetSongBPM API for quick compilation of the top 100 searched songs at your entered beats per minute (BPM) or tempo. The user enters a tempo (between 40 and 220 BPM) into the input and clicks search which makes a request to the API for the top 100 songs meeting that criteria including song data such as Title, Artist, Year, Album and Genre which are added to the DOM using JavaScript.
+Backstock is a full stack web application following MVC architecture. It runs on Node.js and Express for the backend and EJS to render the views. Users can sign up using passport authentication and begin adding new backstock items to their inventory. The inventory list can be sorted by several columns and filtered through typing in the Search bar. Individual items can be edited if quantities or other information needs to be updated. Conditional rendering helps users know when items need to be restocked or when they are expired.
 
 ## Optimizations
-Future iterations might include sorting by category, searching by song title, finding optimized song suggestions at the same tempo of a specific song, and searching within a specific genre, year, etc.
-
-In the beginning, I was retrieving only song titles and artists and decided to add in the other categories of data for better identification. Also, the first iteration included adding new information as list items and later as more information was added to change the JavaScript to create new elements in a table and add them to the site.
+Future iterations might include table sorting by expiration date, notifying users when expiration dates are approaching, filtering based on multiple categories, creating a shopping list, and automatically adding out-of-stock items to the shopping list.
 
 ## Lessons Learned:
 
-I learned about accessing JSON from an API properly and different ways to append rows and columns of data using JavaScript. 
+I learned a lot about working with Bootstrap classes and when this was advantageous, and when it was better to use my own styling. Sorting tables, specifically dates, proved to be more difficult than first anticipated. Date rendering also presented challenges, and I ended up using Day.js which is a suggested replacement for the ever-popular Moment.js, which is considered legacy.
 
 ## Other Projects:
 
