@@ -56,7 +56,7 @@
                 <td class="todoItem mobile-hide width-hide size" data-id='<%=el._id%>'>
                     <span><%= el.size %></span>
                 </td>
-                <td class='todoItem mobile-hide width-hide expiration' data-id='<%=el._id%>'>
+                <td class='todoItem mobile-hide width-hide expiration' data-id='<%=el._id%>' data-sort='YYYYMMDD'>
                     <% if (el.expirationDate) { %>
                         <span class='<%= dayjs(el.expirationDate).isBefore(dayjs()) ? 'expired' : ''%>' data-sort='YYYYMMDD'><%= dayjs(el.expirationDate).format('MM/DD/YYYY') %></span>
                     <% } %>
