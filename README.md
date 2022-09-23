@@ -1,7 +1,7 @@
-# SongBeats
+# Backstock
 
-An app to help you find songs at your ideal tempo - 
-SongBeats can aid your music selection for running, aerobics, work soundtracks, marching band, choirs and any usage you can imagine! 
+Keep track of what you have on hand so you always know - even on the go!
+Backstock is a home inventory app for tracking the items you have, their location, ideal quantities, and expiration dates! 
 
 <p align="center">
   <a href="https://songbeats.netlify.app/" target="_blank">
