@@ -12,6 +12,8 @@ function sortTableByColumn(table, column, asc = true) {
         const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim()
         if (isNaN(parseFloat(aColText)) && isNaN(parseFloat(bColText))) {
             return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+        } else if ((aColText.includes('/') && aColText.includes('20')) && (bColText.includes('/') && bColText.includes('20'))) {
+            return new Date(aColText).getTime() > new Date(bColText).getTime() ? (1 * dirModifier) : (-1 * dirModifier)
         }
           return +aColText > +bColText ? (1 * dirModifier) : (-1 * dirModifier);
         });
