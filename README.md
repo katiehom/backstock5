@@ -4,7 +4,7 @@ Keep track of what you have on hand so you always know - even on the go! </br>
 Backstock is a home inventory app for tracking the items you have, their location, ideal quantities, and expiration dates! 
 
 <p align="center">
-  <a href="https://backstock.app/" target="_blank">
+  <a href="http://backstock.app/" target="_blank">
     <img src="" alt="Backstock"/>
   </a>
 </p>
@@ -13,7 +13,7 @@ Backstock is a home inventory app for tracking the items you have, their locatio
   <a href="https://github.com/katiehom/backstock5" target="_blank">
     <img src="https://img.shields.io/static/v1?label=|&message=REPO&color=1f1591&style=plastic&logo=github&logo-color=white"/>
   </a>  
-  <a href="https://backstock.app/" target="_blank">
+  <a href="http://backstock.app/" target="_blank">
     <img src="https://img.shields.io/static/v1?label=|&message=WEBSITE&color=c90c64&style=plastic&logo=netlify&logo-color=white"/>
   </a>
 </p>
