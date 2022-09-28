@@ -5,7 +5,7 @@ Backstock is a home inventory app for tracking the items you have, their locatio
 
 <p align="center">
   <a href="http://backstock.app/" target="_blank">
-    <img src="https://user-images.githubusercontent.com/52755177/192896488-3f9bde70-ace2-48b2-a69c-daaa43f63cb4.gif" alt="Backstock"/>
+    <img src="https://user-images.githubusercontent.com/52755177/192899177-55b7c039-5714-479c-94f5-b63f2f60234c.gif" alt="Backstock"/>
   </a>
 </p>
 
