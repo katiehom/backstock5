@@ -21,7 +21,7 @@ Backstock is a home inventory app for tracking the items you have, their locatio
 
 ## How It's Made:
 
-**Tech used:** <strong>Node, Express, EJS, Passport, Bootstrap & JavaScript</strong>
+**Tech used:** <strong>Node.js, Express.js, EJS, Passport, Bootstrap & JavaScript</strong>
 
 Backstock is a full stack web application following MVC architecture. It runs on Node.js and Express for the backend and EJS to render the views. Users can sign up using passport authentication and begin adding new backstock items to their inventory. The inventory list can be sorted by several columns and filtered through typing in the Search bar. Individual items can be edited if quantities or other information needs to be updated. Conditional rendering helps users know when items need to be restocked or when they are expired.
 
