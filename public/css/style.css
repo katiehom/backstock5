@@ -11,8 +11,7 @@ body {
     background: rgb(62,34,195);
     background: linear-gradient(310deg, rgba(62,34,195) 0%, rgb(68, 255, 162) 100%);
     background-attachment: fixed;
-    overflow: scroll;
-    margin: 0 0 50px;
+    overflow-x: hidden;
 }
 h1 {
     font-size: 5rem;
@@ -48,11 +47,11 @@ h3 {
 .expired {
     color: rgb(255, 67, 117);
 }
-footer {
+/* footer {
     height: 50px;
     bottom: 0;
     width: 100%;
-}
+} */
 .hidden {
     display: none;
 }
